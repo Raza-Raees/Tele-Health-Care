@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecommendD"
+    android:orientation="vertical">
+
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:background="@color/white">
+
+
+
+
+ <TextView
+     android:id="@+id/Recommend"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+
+     android:layout_alignParentStart="true"
+     android:layout_marginStart="20dp"
+     android:layout_marginTop="25dp"
+     android:fontFamily="sans-serif-thin"
+     android:text="Select Symptoms"
+     android:textColor="@color/black"
+     android:textSize="30sp"
+     android:textStyle="bold"
+     tools:ignore="HardcodedText" />
+<!--    <RadioGroup-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/Recommend"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:id="@+id/pain"-->
+<!--        android:orientation="horizontal">-->
+   <CheckBox
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/Recommend"
+       android:text="Abdominal Pain"
+       android:id="@+id/ap"
+       android:layout_margin="10dp"
+       />
+
+    <CheckBox
+        android:id="@+id/cp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/Recommend"
+
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@+id/ap"
+        android:text="Chest Pain" />
+
+
+    <CheckBox
+        android:layout_toRightOf="@+id/cp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Recommend"
+        android:text="Bone Pain"
+        android:id="@+id/bp"
+        android:layout_margin="10dp"
+
+        />
+<!--    </RadioGroup>-->
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/recdr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bp"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/round_button"
+        android:fontFamily="sans-serif"
+        android:onClick="findPDr"
+        android:padding="15dp"
+        android:text="Find Dr nearby "
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        tools:ignore="HardcodedText" />
+
+
+  <CheckBox
+      android:id="@+id/fever"
+      android:layout_width="130dp"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/recdr"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginEnd="10dp"
+      android:layout_marginBottom="10dp"
+      android:text="Fever" />
+
+    <CheckBox
+        android:id="@+id/nausea"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recdr"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@+id/fever"
+        android:text="Nausea" />
+
+
+    <CheckBox
+        android:id="@+id/cough"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recdr"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@+id/nausea"
+        android:text="Cough" />
+
+  <com.google.android.material.button.MaterialButton
+      android:id="@+id/redr"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/fever"
+
+      android:layout_centerHorizontal="true"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="0dp"
+      android:layout_marginEnd="20dp"
+      android:layout_marginBottom="20dp"
+      android:background="@drawable/round_button"
+      android:fontFamily="sans-serif"
+      android:onClick="findFDr"
+      android:padding="15dp"
+      android:text="Find Dr nearby "
+      android:textColor="@color/white"
+      android:textSize="15sp"
+      tools:ignore="HardcodedText" />
+
+    <CheckBox
+        android:id="@+id/diarhea"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/redr"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Diarrhea" />
+
+    <CheckBox
+        android:id="@+id/burn"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/redr"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@+id/fever"
+        android:text="Burning Micturition" />
+
+
+    <CheckBox
+        android:id="@+id/vomiting"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/redr"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@+id/nausea"
+        android:text="Vomiting" />
+
+  <com.google.android.material.button.MaterialButton
+      android:id="@+id/rdr"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/diarhea"
+
+      android:layout_centerHorizontal="true"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="0dp"
+      android:layout_marginEnd="20dp"
+      android:layout_marginBottom="20dp"
+      android:background="@drawable/round_button"
+      android:fontFamily="sans-serif"
+      android:onClick="findDDr"
+      android:padding="15dp"
+      android:text="Find Dr nearby "
+      android:textColor="@color/white"
+      android:textSize="15sp"
+      tools:ignore="HardcodedText" />
+
+ <CheckBox
+     android:id="@+id/constipation"
+     android:layout_width="130dp"
+     android:layout_height="wrap_content"
+     android:layout_below="@id/rdr"
+     android:layout_marginStart="10dp"
+     android:layout_marginTop="10dp"
+     android:layout_marginEnd="10dp"
+     android:layout_marginBottom="10dp"
+     android:text="Constipation" />
+
+     <CheckBox
+         android:id="@+id/duratran"
+         android:layout_width="100dp"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/rdr"
+         android:layout_marginStart="10dp"
+         android:layout_marginTop="10dp"
+         android:layout_marginEnd="10dp"
+         android:layout_marginBottom="10dp"
+         android:layout_toRightOf="@+id/fever"
+         android:text="Duratran" />
+
+
+     <CheckBox
+         android:id="@+id/urinary"
+         android:layout_width="100dp"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/rd"
+         android:layout_marginStart="10dp"
+         android:layout_marginTop="10dp"
+
+         android:layout_marginEnd="10dp"
+         android:layout_marginBottom="10dp"
+         android:layout_toRightOf="@+id/nausea"
+         android:text="urinary tract infection" />
+
+  <com.google.android.material.button.MaterialButton
+      android:id="@+id/r"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/burning"
+
+      android:layout_centerHorizontal="true"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="0dp"
+      android:layout_marginEnd="20dp"
+      android:layout_marginBottom="20dp"
+      android:background="@drawable/round_button"
+      android:fontFamily="sans-serif"
+      android:onClick="findBDr"
+      android:padding="15dp"
+      android:text="Find Dr nearby "
+      android:textColor="@color/white"
+      android:textSize="15sp"
+      tools:ignore="HardcodedText" />
+
+     <CheckBox
+         android:id="@+id/burning"
+         android:layout_width="130dp"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/rd"
+         android:layout_marginStart="10dp"
+         android:layout_marginTop="10dp"
+         android:layout_marginEnd="10dp"
+         android:layout_marginBottom="10dp"
+         android:text="Burning Urination" />
+
+     <CheckBox
+         android:id="@+id/dur"
+         android:layout_width="100dp"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/rd"
+         android:layout_marginStart="10dp"
+         android:layout_marginTop="10dp"
+         android:layout_marginEnd="10dp"
+         android:layout_marginBottom="10dp"
+         android:layout_toRightOf="@+id/fever"
+         android:text="Duratran" />
+
+
+     <CheckBox
+         android:id="@+id/pa"
+         android:layout_width="100dp"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/rdr"
+         android:layout_marginStart="10dp"
+         android:layout_marginTop="10dp"
+
+         android:layout_marginEnd="10dp"
+         android:layout_marginBottom="10dp"
+         android:layout_toRightOf="@+id/nausea"
+         android:text="Pain" />
+
+  <com.google.android.material.button.MaterialButton
+      android:id="@+id/rd"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/constipation"
+
+      android:layout_centerHorizontal="true"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="0dp"
+      android:layout_marginEnd="20dp"
+      android:layout_marginBottom="20dp"
+      android:background="@drawable/round_button"
+      android:fontFamily="sans-serif"
+      android:onClick="findCDr"
+      android:padding="15dp"
+      android:text="Find Dr nearby "
+      android:textColor="@color/white"
+      android:textSize="15sp"
+      tools:ignore="HardcodedText" />
+
+
+ </RelativeLayout>
+
+</ScrollView>

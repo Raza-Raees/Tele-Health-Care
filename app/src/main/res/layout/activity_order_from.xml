@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderFrom">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="sans-serif-thin"
+            android:text="Delivery Form"
+            android:textColor="@color/purple_200"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signup"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="sans-serif"
+            android:text="Kindly, Enter details to proceed."
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/round"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:drawablePadding="10dp"
+            android:fontFamily="sans-serif"
+            android:hint="Enter Name"
+            android:inputType="textPersonName"
+            android:maxLength="25"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColor="@color/purple_200"
+            android:textColorHint="@color/purple_200"
+            tools:ignore="Autofill,HardcodedText,RtlHardcoded" />
+
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/username"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/round"
+            android:drawableLeft="@drawable/ic_baseline_email_24"
+            android:drawablePadding="10dp"
+            android:fontFamily="sans-serif"
+            android:hint="Enter Email"
+            android:inputType="textEmailAddress"
+            android:maxLength="30"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColor="@color/purple_200"
+            android:textColorHint="#304FFE"
+            tools:ignore="Autofill,HardcodedText,RtlHardcoded,TextContrastCheck,TextContrastCheck,TextContrastCheck" />
+
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/round"
+            android:drawableLeft="@drawable/ic_baseline_smartphone_24"
+            android:drawablePadding="10dp"
+            android:fontFamily="sans-serif"
+            android:hint="Enter Mobile"
+            android:inputType="number"
+            android:maxLength="11"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColor="@color/purple_200"
+            android:textColorHint="@color/purple_200"
+            tools:ignore="Autofill,HardcodedText,RtlHardcoded" />
+
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phone"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/round"
+            android:fontFamily="sans-serif"
+            android:gravity="top|start"
+            android:hint="Enter Address"
+            android:inputType="textMultiLine"
+            android:lines="6"
+            android:maxLines="10"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColor="@color/purple_200"
+            android:textColorHint="@color/purple_200"
+
+            />
+
+<!--        <TextView-->
+<!--            android:id="@+id/item"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/address"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:background="@drawable/round"-->
+<!--            android:drawableLeft="@drawable/ic_baseline_medical_services_24"-->
+<!--            android:drawablePadding="10dp"-->
+<!--            android:fontFamily="sans-serif"-->
+<!--            android:maxLength="25"-->
+<!--            android:minHeight="48dp"-->
+<!--            android:padding="10dp"-->
+<!--            android:textColor="@color/purple_200"-->
+<!--            android:textColorHint="@color/purple_200"-->
+<!--            tools:ignore="Autofill,HardcodedText,RtlHardcoded" />-->
+
+
+        <TextView
+            android:id="@+id/cod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/address"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="sans-serif"
+            android:text="*Cash on Delivery"
+            android:textColor="#FF0202"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/SignUp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cod"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/round_button"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:onClick="order"
+            android:padding="15dp"
+            android:text="Place Order"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            tools:ignore="HardcodedText" />
+
+
+
+
+    </RelativeLayout>
+
+</ScrollView>

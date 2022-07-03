@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Pharmacy"
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/symptoms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="sans-serif-thin"
+            android:text="Pharmacy Shop"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@id/symptoms"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/symptoms"
+            android:backgroundTint="#4CAF50"
+            android:onClick="Location"
+            android:text="Green Pharmacy Location"
+            android:textSize="13dp"
+
+            />
+
+
+        <GridLayout
+            android:id="@+id/drgrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/symptoms"
+            android:layout_marginTop="25dp"
+            android:alignmentMode="alignMargins"
+            android:background="@color/white"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:rowCount="4">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/panadol" />
+
+                    <TextView
+                        android:id="@+id/dn1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Panadol"
+                        android:textColor="#6f6f6f6f"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/dn1time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="40 PKR"
+                        android:textColor="#6f6f6f6f"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:layout_width="80dp"
+                        android:textSize="13dp"
+                        android:layout_height="50dp"
+                        android:onClick="ordernow"
+                        android:text="Order Now"
+
+
+                        />
+
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/flagyl" />
+
+                    <TextView
+                        android:id="@+id/dn2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Flagyl"
+                        android:textColor="#6f6f6f6f"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/dn2time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="65 PKR"
+                        android:textColor="#6f6f6f6f"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:layout_width="80dp"
+                        android:textSize="13dp"
+                        android:layout_height="50dp"
+                        android:onClick="ordernow"
+                        android:text="Order Now"
+
+
+                        />
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+
+                >
+
+                <LinearLayout
+                    android:id="@+id/ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/skilax" />
+
+                    <TextView
+
+                        android:id="@+id/dn3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Skilax"
+                        android:textColor="#6f6f6f6f"
+                        android:textSize="18sp" />
+
+                    <TextView
+
+                        android:id="@+id/dn3time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="100 PKR"
+                        android:textColor="#6f6f6f6f"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:layout_width="80dp"
+                        android:textSize="13dp"
+                        android:layout_height="50dp"
+                        android:onClick="ordernow"
+                        android:text="Order Now"
+
+                        />
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/cranmax" />
+
+                    <TextView
+
+                        android:id="@+id/dn4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Cran Max"
+                        android:textColor="#6f6f6f6f"
+                        android:textSize="18sp" />
+
+                    <TextView
+
+                        android:id="@+id/dn4time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="35 PKR"
+                        android:textColor="#6f6f6f6f"
+                        android:textSize="15sp" />
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:layout_width="80dp"
+                        android:textSize="13dp"
+                        android:layout_height="50dp"
+                        android:onClick="ordernow"
+                        android:text="Order Now"
+
+                        />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </GridLayout>
+
+    </RelativeLayout>
+</ScrollView>
